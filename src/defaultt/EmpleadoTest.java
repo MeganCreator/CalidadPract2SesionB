@@ -34,8 +34,9 @@ class EmpleadoTest {
 	// 3 primas
 	// 2 extras 
 	
+	//VENDEDOR
 	@Test
-	void testCalculoNominaBrutaEmpleado_Vendedor_VentasInferior1000_ExtrasPositivas() {
+	void testCalculoNominaBrutaEmpleado_Vendedor_VentasInferior1000_ExtrasPositivas() { 
 		float resultado = empleado.calculoNominaBruta(TipoEmpleado.Vendedor, 800, 2);
 		assertEquals(2060, resultado); //assertEquals(resultadoEsperado, resultadoRecibido)
 	}
@@ -70,6 +71,7 @@ class EmpleadoTest {
 		assertEquals(2200, resultado);
 	}
 	
+	//ENCARGADO
 	@Test
 	void testCalculoNominaBrutaEmpleado_Encargado_VentasInferior1000_ExtrasPositivas() {
 		float resultado = empleado.calculoNominaBruta(TipoEmpleado.Encargado, 800, 2);
@@ -110,6 +112,7 @@ class EmpleadoTest {
 		assertEquals(2700, resultado);
 	}
 	
+	//NULL
 	@Test
 	void testCalculoNominaBrutaEmpleado_Null_VentasInferior1000_ExtrasPositivas() {
 		float resultado = empleado.calculoNominaBruta(null, 800, 2);
@@ -145,7 +148,8 @@ class EmpleadoTest {
 		float resultado = empleado.calculoNominaBruta(null, 1800, -2);
 		assertEquals(-1, resultado);
 	}
-
+	
+	//NOMINA NETA
 	@Test
 	void testCalculoNominaNeta_BrutaSuperior2500() {
 		float resultado = empleado.calculoNominaNeta(2800);
